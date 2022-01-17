@@ -1,15 +1,35 @@
-# 6-shell-2
+# shell
 
-The structure of my code remains the same as in Shell 1, overall.
-Now, in my execution function, I also check for fg, bg, or jobs commands.
-Additionally, in the fork() part of my code, I now have checks for fg/bg
-process initiation, and handle that within the execution function.
-Finally, I now have a reaping function that I call to wait for all background
-processes to terminate.
+## overview
 
-No bugs or extra features.
+This project was completed for my Fall 2021 course "Introduction to Computer Systems." The objective was to create a shell capable of functioning just as a linux shell would. Here is the list of available builtin commands:
 
-To compile, navigate to the proper directory, run make clean all, and then
-type into the terminal "./33sh" for a shell with a prompt, and "./33noprompt"
-for a shell without a prompt. From there, execute any command. To exit the shell,
-either type CTRL + D or CTRL + \.
+    cd
+    rm
+    ln
+    exit
+    jobs
+    fg
+    bg
+    
+Additionally, this shell features I/O redirection, proper whitespace handling, signal handling, and reaping of child processes.
+
+## disclaimers
+
+All of sh.c was written by me, as well as the Makefile. jobs.c and jobs.h were included as template code, to enable us to focus on the shell without also implementing a system to keep track of jobs.
+
+## how to use
+
+To compile, navigate to the proper directory, run 
+
+    make clean all
+
+and then run
+    
+    ./33sh
+
+for a shell with a prompt
+
+    ./33noprompt
+    
+for a shell without a prompt. From there, execute any of the supported commands. To exit the shell, type either CTRL + D or CTRL + \.
