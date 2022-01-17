@@ -12,7 +12,7 @@ This project was completed for my Fall 2021 course "Introduction to Computer Sys
     fg
     bg
     
-Additionally, this shell features I/O redirection, proper whitespace handling, signal handling, and reaping of child processes.
+Additionally, this shell features user-defined executable support, I/O redirection, proper whitespace handling, signal handling, and reaping of child processes.
 
 ## disclaimers
 
